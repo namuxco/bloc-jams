@@ -9,9 +9,8 @@ html {
    font-family: 'Open Sans';
    color: white;
    min-height: 100%;
-   background: -webkit-radial-gradient(  #2b1339, #380c77);
-   background: radial-gradient(   #2b1339, #380c77);
-  }
+  background-color: #F07575; /* fallback color if gradients are not supported */
+  background: -webkit-linear-gradient(#ebd4ef, #cab8ce); /* For Safari 5.1 to 6.0 */  }
 
   body.landing {
     background: #5B5579;
