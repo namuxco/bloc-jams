@@ -192,11 +192,19 @@ require('./album');
    }
  };
  
+    var onHover = function(event) {
+      console.log("fired"); // delete this before you hand in the assignment. It's just for debugging...
+     $(this).append(buildAlbumOverlay("/album.html"));
+   };
+
+  $('.collection-album-image-container').hover(onHover);
 
   var buildAlbumThumbnail = function() {
     var template =
         '<div class="collection-album-container col-md-2">'
-      + '  <img src="/images/album-placeholder.png"/>'
+      + '  <div class="collection-album-image-container">'
+      + '    <img src="/images/album-placeholder.png"/>'
+      + '  </div>'
       + '  <div class="caption album-collection-info">'
       + '    <p>'
       + '      <a class="album-name" href="/album.html"> Album Name </a>'
@@ -211,8 +219,34 @@ require('./album');
       + '  </div>'
       + '</div>';
  
-   return $(template);
+    // Create jQuery object
+    var $returnVal = $(template);
+
+    // bind the `hover()` event
+    $returnVal.find('.collection-album-image-container').hover(onHover);
+
+    // Return that thingy
+    return $returnVal;
  };
+
+ // below the buildAlbumThumbnail function
+
+  var buildAlbumOverlay = function(albumURL) {
+    var template =
+        '<div class="collection-album-image-overlay">'
+      + '  <div class="collection-overlay-content">'
+      + '    <a class="collection-overlay-button" href="' + albumURL + '">'
+      + '      <i class="fa fa-play"></i>'
+      + '    </a>'
+      + '    &nbsp;'
+      + '    <a class="collection-overlay-button">'
+      + '      <i class="fa fa-plus"></i>'
+      + '    </a>'
+      + '  </div>'
+      + '</div>'
+      ;
+    return $(template);
+  };
 
  if (document.URL.match(/\/collection.html/)) {
    // Wait until the HTML is fully processed.
