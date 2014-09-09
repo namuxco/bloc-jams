@@ -193,9 +193,13 @@ require('./album');
  };
  
     var onHover = function(event) {
-      console.log("fired"); // delete this before you hand in the assignment. It's just for debugging...
+      console.log("fired");
      $(this).append(buildAlbumOverlay("/album.html"));
    };
+
+  var offHover = function(event) {
+    $(this).find('.collection-album-image-overlay').remove();
+  };
 
   $('.collection-album-image-container').hover(onHover);
 
