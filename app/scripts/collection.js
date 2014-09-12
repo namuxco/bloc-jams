@@ -17,7 +17,7 @@
     $(this).find('.collection-album-image-overlay').remove();
   };
 
-  $('.collection-album-image-container').hover(onHover);
+  //$('.collection-album-image-container').hover(onHover);
 
   var buildAlbumThumbnail = function() {
     var template =
@@ -43,7 +43,7 @@
     var $returnVal = $(template);
 
     // bind the `hover()` event
-    $returnVal.find('.collection-album-image-container').hover(onHover);
+    $returnVal.find('.collection-album-image-container').hover(onHover, offHover);
 
     // Return that thingy
     return $returnVal;
