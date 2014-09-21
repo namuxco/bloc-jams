@@ -12,8 +12,8 @@ body {
    font-family: 'Open Sans';
    color: white;
    min-height: 100%;
-   background-color: #F07575; /* fallback color if gradients are not supported */
-   background: -webkit-linear-gradient(#F07575, #ff7f7f); /* For Safari 5.1 to 6.0 */
+   background-color: #7b46a3; /* fallback color if gradients are not supported */
+   /*background: -webkit-linear-gradient(#F07575, #ff7f7f); For Safari 5.1 to 6.0 */
    padding-bottom: 150px;
 }
 
@@ -391,4 +391,108 @@ body.landing {
    display: inline-block;
    width: 100px;
    vertical-align: middle;
+ }
+
+ $hot-pink: #D2287B;
+ .user-profile-header {
+   border: none;
+   font-size: 24px;
+   font-weight: 300;
+   margin-top: 20px;
+ }
+ .user-image-container {
+   display: inline-block;
+ }
+ 
+ .tab-content.user-subscription {
+   .well {
+     background: transparent;
+     border: $hot-pink 2px solid;
+   }
+ 
+   .subsection-label {
+     margin-bottom: 15px;
+     font-size: 24px;
+     color: white;
+     font-weight: 300;
+   }
+ 
+   .table.credit-card-list {
+     td {
+       border-top-color: rgba(white, .6);
+       font-weight: 300;
+       font-size: 16px;
+     }
+   }
+   .fa-minus-circle {
+     color: $hot-pink;
+   }
+ 
+ }
+ .user-profile-tabs-container {
+   margin: 42px auto 20px;
+   text-align: center;
+   .pagination.profile-pagination {
+     font-weight: 700;
+     border: $hot-pink 2px solid;
+     border-radius: 8px;
+ 
+     & > li > a {
+       border: none;
+       background-color: transparent;
+       color: white;
+       letter-spacing: 2px;
+     }
+ 
+     & > .active > a {
+       background-color: $hot-pink;
+       border-radius: 4px;
+     }
+   }
+ }
+ 
+ .default-form {
+   $default-input-color: #0A032B;
+   label {
+     font-weight: 300;
+     font-size: 16px;
+   }
+   input {
+     background-color: rgba(white, .6);
+     border-radius: 0;
+     border: none;
+     font-weight: 300;
+     font-size: 16px;
+     padding: 10px 12px 10px;
+   }
+ }
+ 
+ .no-left-gutter {
+   padding-left: 0px;
+ }
+ 
+ .no-right-gutter {
+   padding-right: 0px;
+ }
+
+  .default-button {
+   background-color: #D2287B;
+   color: white;
+   font-weight: 700;
+   border-radius: 5px;
+   border: none;
+   padding: 10px 20px;
+   font-size: 14px;
+   letter-spacing: 2px;
+   outline: none;
+ 
+   &:active {
+     background-color: #9B1D64;
+     outline: none;
+   }
+ 
+   &:disabled {
+     background-color: #B3B3B3;
+     cursor: not-allowed;
+   }
  }

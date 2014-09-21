@@ -29,8 +29,8 @@
     $(this).css({'font-size': '150%'})
    })
 
-   $('.player-header-nav').click(function(){
+   /*$('.player-header-nav').click(function(){
     console.log('fade out');
     $(this).fadeOut(1000);
-   })
+   })*/
  });
