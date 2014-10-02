@@ -3,13 +3,15 @@
  //require('./collection');
  //require('./profile');
  
+ blocJams = angular.module('BlocJams', ['ui.router']);
+
  blocJams.config(['$stateProvider', '$locationProvider', function($stateProvider, $locationProvider) {
    $locationProvider.html5Mode(true);
  
    $stateProvider.state('landing', {
      url: '/',
      controller: 'Landing.controller',
-     templateUrl: '/../templates/landing.html'
+     templateUrl: '/templates/landing.html'
    });
  }]);
  
