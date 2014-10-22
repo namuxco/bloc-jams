@@ -379,10 +379,10 @@ require.register("scripts/album", function(exports, require, module) {
      return 'default';
    };
 
-    $scope.playSong = function(song) {
-     SongPlayer.setSong($scope.album, song);
-     SongPlayer.play();
-    };
+    // $scope.playSong = function(song) {
+    //  SongPlayer.setSong($scope.album, song);
+    //  SongPlayer.play();
+    // };
  
     $scope.pauseSong = function(song) {
      SongPlayer.pause();
