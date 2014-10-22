@@ -1831,6 +1831,13 @@ if (typeof JSON !== 'object') {
         .forEach(function(link) {
           link.href = cacheBuster(link.href);
         });
+
+      // hack to force page repaint
+      var el = document.body;
+      var bodyDisplay = el.style.display || 'block';
+      el.style.display = 'none';
+      el.offsetHeight;
+      el.style.display = bodyDisplay;
     }
   };
   var port = ar.port || 9485;
