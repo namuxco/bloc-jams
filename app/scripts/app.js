@@ -268,7 +268,6 @@
            scope.$apply(function(){
              scope.value = percent * scope.max;
              notifyCallback(scope.value);
-
            });
          });
  
